@@ -41,25 +41,44 @@ while (harryPotterMovies <= 8){
   console.log("BONUS SECTION=============================================");
 // 5a. Create a const variable named hogwartsHouses and set the value of the variable to the following array items "Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin".
 
-const hogwartsHouses = `Gryffindor Hufflepuff Ravenclaw Slytherin`; // I may have cheated on this question?
+const hogwartsHouses = [
+  "Gryffindor",
+  "Hufflepuff",
+  "Ravenclaw",
+  "Slytherin"
+];
 
 // 5b. Using nested For Of Loops, have each house name displayed in the console/terminal one letter at a time (You will need a console log for this).
-for (char of hogwartsHouses){
-    console.log(char);
+for (house of hogwartsHouses){
+   for (chr of house){
+     console.log(chr);
+   };
 }
 
 // 6a. Create a const variable named quote and set the value of the variable to the following array items "Yer", "A", "Wizard", "Harry".
 
-const quote = ["Yer", "A", "Wizard", "Harry"]
+const quote = [
+  "Yer",
+  "A",
+  "Wizard",
+  "Harry"
+  ];
 
 // 6b. Using a loop (You can decide which one you want to use), have the message "Yer A Wizard Harry" display on ONE line in the console/terminal (NOTE: Must have spaces between the words when it is displayed. Also, You will need a console log for this)(HINT: You will need to create another variable)
 
-// for (catergory of quote){
-//     for (house of catergory){
-//         console.log(quote);
-//     }
-// }
+let fullQuote = "";
+for (i = 0; i < quote.length; i++){
+  fullQuote += quote[i];
+  if (i < quote.length - 1){
+    fullQuote += " ";
+  }
+}
+console.log(fullQuote);
+//OR
 
-// for (i = 0; i < topics.length; i++){
-//     console.log(`${i + 1}. ${topics[i]}`);
-//   }
+// let fullQuote = "";
+// for (word of quote){
+//   fullQuote += `${word} `
+// }
+// fullQuote = fullQuote.trim();
+// console.log(fullQuote);
